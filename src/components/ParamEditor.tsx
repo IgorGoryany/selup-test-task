@@ -1,9 +1,14 @@
 import { useState, useImperativeHandle, forwardRef } from "react";
 
+// для того чтобы мы могли использовать список значений из нескольких строк, мы
+// должны иметь уникальный id у ParamValue.
+// Или мы можем использовать добавить опциональное поле options
+// и использовать select в компоненте ParamEditorForm если у Param есть options
 export interface Param {
     id: number;
     name: string;
     type: "string";
+    // options?: string[]
 }
 
 interface ParamValue {
